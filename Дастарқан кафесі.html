@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Дастарқан кафесі</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Nunito+Sans:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#f3ebe0;--ink:#1f2a44;--blue:#0f5c7a;--red:#9c2a2a;--gold:#c8962e;--card:#fbf6ee;--line:#d9c9ae;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+:root:not([data-theme="light"]){color-scheme:light}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#141a2b;--ink:#efe6d6;--blue:#5fb3d1;--red:#e07a6e;--gold:#e0b255;--card:#1d2540;--line:#34406a;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#141a2b;--ink:#efe6d6;--blue:#5fb3d1;--red:#e07a6e;--gold:#e0b255;--card:#1d2540;--line:#34406a;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito Sans",system-ui,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:Lora,Georgia,serif;margin:0;line-height:1.2}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.orn{height:22px;background:repeating-linear-gradient(135deg,var(--red) 0 10px,transparent 10px 20px),repeating-linear-gradient(45deg,var(--blue) 0 10px,transparent 10px 20px);opacity:.85;border-block:2px solid var(--gold)}
+header{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;padding:16px clamp(16px,5vw,64px)}
+.logo{font-family:Lora,serif;font-weight:700;font-size:1.4rem;text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:6px 22px}
+nav a{text-decoration:none;font-weight:600}
+nav a:hover{color:var(--red)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:clamp(32px,7vw,90px) clamp(16px,5vw,64px)}
+.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);color:var(--blue)}
+.hero p{max-width:52ch;font-size:1.1rem}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:13px 26px;border-radius:4px;text-decoration:none;font-weight:600;margin-top:12px}
+.btn:hover{filter:brightness(1.1)}
+.yurt{width:100%;max-width:420px;justify-self:center;color:var(--blue)}
+section{padding:clamp(32px,6vw,72px) clamp(16px,5vw,64px)}
+h2{font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:8px}
+.sub{max-width:60ch;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.item{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--gold);padding:18px 20px}
+.item h3{font-size:1.15rem;display:flex;justify-content:space-between;gap:12px}
+.item h3 span{color:var(--red);white-space:nowrap}
+.item p{margin:6px 0 0;font-size:.95rem}
+.culture{background:var(--blue);color:#fff}
+.culture h2{color:#fff}
+.culture .grid .item{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);border-left-color:var(--gold);color:#fff}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.info div{border-top:3px solid var(--red);padding-top:10px}
+footer{text-align:center;padding:24px 16px 32px;font-size:.9rem}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.yurt{order:-1;max-width:260px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="orn" aria-hidden="true"></div>
+<header>
+  <a class="logo" href="#top">Дастарқан</a>
+  <nav aria-label="Мәзір">
+    <a href="#menu">Мәзір</a><a href="#culture">Мәдениет</a><a href="#contact">Байланыс</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div>
+      <h1>Дастарқан басында – дәстүрдің дәмі</h1>
+      <p>Қазақ асханасының классикасы мен шынайы шай рәсімі. Қонақ – құдайдың қонағы: есігіміз әрдайым ашық.</p>
+      <a class="btn" href="#contact">Үстел брондау</a>
+    </div>
+    <svg class="yurt" viewBox="0 0 200 170" role="img" aria-label="Киіз үй">
+      <circle cx="100" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="4"/>
+      <path d="M56 60 A44 44 0 0 1 144 60 Z" fill="currentColor" opacity=".18"/>
+      <path d="M100 16v88M70 24l30 40 30-40" stroke="currentColor" stroke-width="3" fill="none"/>
+      <rect x="40" y="100" width="120" height="50" fill="none" stroke="currentColor" stroke-width="4"/>
+      <path d="M40 100l20 50M80 100l-20 50M80 100l20 50M120 100l-20 50M120 100l20 50M160 100l-20 50" stroke="currentColor" stroke-width="2"/>
+      <path d="M88 150v-30h24v30" fill="var(--red)"/>
+    </svg>
+  </div>
+
+  <div class="orn" aria-hidden="true"></div>
+
+  <section id="menu">
+    <h2>Мәзір</h2>
+    <p class="sub">Күнде таңертең жаңа дайындалады. Бағасы теңгемен берілген.</p>
+    <div class="grid">
+      <div class="item"><h3>Бешбармақ <span>3 500 ₸</span></h3><p>Жылқы еті, қазы, қолдан жайған қамыр, сорпа.</p></div>
+      <div class="item"><h3>Қуырдақ <span>2 800 ₸</span></h3><p>Қозы еті мен картоп, пияз қосып қуырылған.</p></div>
+      <div class="item"><h3>Манты <span>2 200 ₸</span></h3><p>Қой еті мен асқабақ, қаймақпен беріледі.</p></div>
+      <div class="item"><h3>Баурсақ <span>900 ₸</span></h3><p>Ыстық, қытырлақ, қаймақ немесе бал қосып.</p></div>
+      <div class="item"><h3>Қазақша шай <span>600 ₸</span></h3><p>Сүт қосылған қою шай, шәйнекпен.</p></div>
+      <div class="item"><h3>Қымыз <span>1 200 ₸</span></h3><p>Жылқы сүтінен дайындалған, табиғи ашытылған.</p></div>
+    </div>
+  </section>
+
+  <section id="culture" class="culture">
+    <h2>Біздің мәдениет</h2>
+    <p class="sub">Кафеміз қазақ халқының қонақжайлылығын жалғастырады.</p>
+    <div class="grid">
+      <div class="item"><h3>Қонақжайлылық</h3><p>Әр қонаққа алдымен шай мен баурсақ ұсынамыз.</p></div>
+      <div class="item"><h3>Ою-өрнек</h3><p>Интерьер мен ыдыс қазақ өрнегімен безендірілген.</p></div>
+      <div class="item"><h3>Ауыл дәмі</h3><p>Ет пен сүт өнімдерін жергілікті шаруалардан аламыз.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Байланыс</h2>
+    <div class="info">
+      <div><h3>Мекенжай</h3><p>Түркістан қаласы, Тәуке хан даңғылы, 12</p></div>
+      <div><h3>Жұмыс уақыты</h3><p>Күн сайын 09:00 – 23:00</p></div>
+      <div><h3>Брондау</h3><p><a href="tel:+77000000000">+7 700 000 00 00</a></p></div>
+    </div>
+  </section>
+</main>
+
+<div class="orn" aria-hidden="true"></div>
+<footer>© 2026 Дастарқан кафесі. Қош келдіңіз!</footer>
+</body>
+</html>
